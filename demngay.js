@@ -4,6 +4,7 @@ $(document).ready(function () {
         CountDownDay("24/12/2023", ".text-counterb")
         CountDownDay("24/12/2023", ".text-counter-exten")
         CountDownDay("28/12/2023", ".text-counterd")
+        CountDownDay("22/01/2024", ".text-counter-itest")
     }, 1000)
 })
 
