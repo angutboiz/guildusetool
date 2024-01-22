@@ -25,4 +25,25 @@ $(document).ready(function () {
             $(".countdown").html("EXPIRED")
         }
     }, 1000) // Update every 1 second
+
+    var demngay = setInterval(function () {
+        const lastEditDate = moment("24/12/2023", "DD/MM/YYYY")
+
+        const currentDate = moment()
+
+        const daysSinceLastEdit = currentDate.diff(lastEditDate, "days")
+
+        if (daysSinceLastEdit > 365) {
+            var years = Math.floor(daysSinceLastEdit / 365)
+            $(".text-counter").html("Cập nhật " + years + " năm trước")
+        } else if (daysSinceLastEdit > 30) {
+            var months = Math.floor(daysSinceLastEdit / 30)
+            $(".text-counter").html("Cập nhật " + months + " tháng trước")
+        } else if (daysSinceLastEdit > 7) {
+            var weeks = Math.floor(daysSinceLastEdit / 7)
+            $(".text-counter").html("Cập nhật " + weeks + " tuần trước")
+        } else {
+            $(".text-counter").html("Cập nhật " + daysSinceLastEdit + " ngày trước")
+        }
+    }, 1000)
 })
