@@ -10,3 +10,8 @@ body {
     font-family: "Montserrat", sans-serif;
     height: 100vh;
 }
+
+mark {
+    color: #dc3545;
+    font-weight: bold;
+}
